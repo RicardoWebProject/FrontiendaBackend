@@ -5,6 +5,10 @@ from .views.categorias import CategoriasViewSet
 from .views.usuarios import CrearUsuario, ListarUsuarios, ActualizarUsuario, EliminarUsuario, VerUsuario, LoginView
 #Vistas de Articulos
 from .views.articulos import ArticuloViewSet
+#Vistas de Clientes y Fábricas
+from .views.clienteProveedores import ClienteViewSet, FabricaViewSet
+#Vistas de Direcciones
+from .views.direcciones import DireccionesViewSet
 #Router
 from rest_framework.routers import DefaultRouter
 
@@ -12,6 +16,9 @@ router = DefaultRouter()
 
 router.register('categorias', CategoriasViewSet, basename='categorias')
 router.register('articulos', ArticuloViewSet, basename='articulos')
+router.register('clientes', ClienteViewSet, basename='clientes')
+router.register('fabricas', FabricaViewSet, basename='fabricas')
+router.register('direcciones', DireccionesViewSet, basename='direcciones')
 
 urlpatterns = [
     #URLs desde router

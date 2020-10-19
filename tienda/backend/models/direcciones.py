@@ -5,4 +5,4 @@ class Direcciones (models.Model):
     comuna = models.CharField(max_length = 250)
     ciudad = models.CharField(max_length = 250)
     createdAt = models.DateField(auto_now = True)
-    cliente = models.ForeignKey('backend.Cliente', on_delete=models.CASCADE)
+    cliente = models.ForeignKey('backend.Cliente', related_name='direcciones', on_delete=models.CASCADE)

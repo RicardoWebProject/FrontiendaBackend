@@ -12,6 +12,7 @@ class Cliente (models.Model):
     ciudad = models.CharField(max_length=255)
 
 class Fabrica (models.Model):
+    nombre = models.CharField(max_length=255)
     telefono = models.IntegerField()
     cantidad_proveida = models.IntegerField()
-    fabrica_principal = models.BooleanField()
+    fabrica_principal = models.BooleanField(default=True)

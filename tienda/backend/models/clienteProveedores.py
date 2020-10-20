@@ -7,6 +7,9 @@ class Cliente (models.Model):
     nombre = models.CharField(max_length=255)
     saldo = models.FloatField()
     credito_limite = models.FloatField()
+    no_calle = models.IntegerField()
+    comuna = models.CharField(max_length=255)
+    ciudad = models.CharField(max_length=255)
 
 class Fabrica (models.Model):
     telefono = models.IntegerField()
